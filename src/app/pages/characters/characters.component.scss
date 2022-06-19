@@ -1,0 +1,25 @@
+.characters__hero {
+  min-height: 100vh;
+  background: url("https://i.pinimg.com/564x/27/68/32/2768329f9b1610148167aed2e6f57c26.jpg");
+  background-size: cover;
+}
+
+.characters__heading {
+  font-size: 30px;
+  font-weight: bold;
+  color: whitesmoke;
+  text-align: center;
+  padding: 50px 0;
+  text-shadow: 5px 2px 9px #6AF76B, 5px 2px 9px #6AF76B, 5px 2px 9px #6AF76B;
+}
+
+.characters__btn-more {
+  padding: 7px 15px;
+  border: none;
+  border-radius: 10px;
+  margin: 20px 70px;
+  background-color: #05bd05;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}

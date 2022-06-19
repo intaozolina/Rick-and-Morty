@@ -1,0 +1,19 @@
+.header__section {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  padding: 30px 0;
+  background: url("https://i.pinimg.com/564x/27/68/32/2768329f9b1610148167aed2e6f57c26.jpg");
+}
+
+.header__link {
+  font-size: 20px;
+  font-weight: bold;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.active {
+  color: #05bd05;
+}
