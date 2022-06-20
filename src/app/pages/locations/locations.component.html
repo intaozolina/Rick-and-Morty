@@ -1,6 +1,6 @@
 <div class="locations__hero">
   <h1 class="locations__heading">LOCATIONS</h1>
-  <app-location-form></app-location-form>
-  <app-location-list></app-location-list>
-  <button class="locations__btn-more">Load More</button>
+  <app-location-form (searchLocationEvent)="searchLocations($event)"></app-location-form>
+  <app-location-list [locations]="locations"></app-location-list>
+  <button class="locations__btn-more" (click)="loadMore()">Load More</button>
 </div>

@@ -1,0 +1,31 @@
+.locations {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+}
+
+.locations__form-input {
+  width: min-content;
+  padding: 7px 10px;
+  background-color: #05bd05;
+  color: white;
+  border: 1px solid #05bd05;
+  border-radius: 5px;
+  &::placeholder {
+    color: white;
+  }
+}
+
+.locations__form-btn {
+  border-radius: 5px;
+  background-color: white;
+  color: #05bd05;
+  border: #05bd05;
+  cursor: pointer;
+  &:hover {
+    color: white;
+    background-color: #05bd05;
+    opacity: 0.8;
+  }
+}
