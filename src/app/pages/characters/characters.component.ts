@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CharactersResult, SearchParams } from "../../models/character.model";
+import { CharactersResult } from "../../models/character.model";
 import { Subscription } from "rxjs";
 import { CharactersService } from "../../services/characters.service";
 
@@ -14,30 +14,19 @@ export class CharactersComponent {
   charactersSubscription?: Subscription;
   page: number = 1;
 
-  searchParams: SearchParams = {
-    searchGender:'',
-    searchName: '',
-  };
+
   constructor(private charactersService: CharactersService) { }
 
   ngOnInit(): void {
-    if (this.searchParams) {
-      this.charactersSubscription = this.charactersService.getCharacters(this.searchParams.searchName, this.searchParams.searchGender, this.page).subscribe((characters) => {
+
+      this.charactersSubscription = this.charactersService.getCharacters(this.page).subscribe((characters) => {
         this.characters = characters;
       })
-    }
   }
 
-  searchCharacter(searchParameters: SearchParams): void {
-    this.searchParams = searchParameters;
-    this.charactersSubscription = this.charactersService.getCharacters(this.searchParams.searchName, this.searchParams.searchGender, this.page).subscribe((characters) => {
-      this.characters = characters;
-    })
-  }
-
-  loadMore(): void {
+  onScroll(): void {
     this.page = this.page+1;
-    this.charactersSubscription = this.charactersService.getCharacters(this.searchParams.searchName, this.searchParams.searchGender, this.page).subscribe((characters) => {
+    this.charactersSubscription = this.charactersService.getCharacters(this.page).subscribe((characters) => {
       this.characters = this.characters?.concat(characters);
     })
   }

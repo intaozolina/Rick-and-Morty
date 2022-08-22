@@ -1,6 +1,16 @@
 .characters__list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
   padding: 0 70px;
+}
+
+.characters__list-card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  min-height: max-content;
+  min-width: max-content;
 }

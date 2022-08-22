@@ -1,6 +1,6 @@
-<div class="characters__card" *ngIf="character">
-  <img class="character__image" src="{{character.image}}" alt="{{character.name}}">
-  <span>Name: {{character.name}}</span> |
-  <span>Gender: {{character.gender}}</span> |
-  <span>Episode Count: {{character.episode.length}}</span>
+<div class="card rounded-2" *ngIf="character">
+  <img class="card-img-top img-fluid rounded-2" src="{{character.image}}" alt="{{character.name}}">
+  <div class="card-body">
+    <h3 class="card-title">{{character.name}}</h3>
+  </div>
 </div>

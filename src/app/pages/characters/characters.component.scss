@@ -1,7 +1,8 @@
 .characters__hero {
   min-height: 100vh;
-  background: url("https://i.pinimg.com/564x/27/68/32/2768329f9b1610148167aed2e6f57c26.jpg");
-  background-size: cover;
+  background-image: url('https://wallpapers.com/images/hd/rick-and-morty-looking-at-the-night-sky-tr8wxryct280wstz.jpg');
+  background-size: auto;
+  background-blend-mode: soft-light;
 }
 
 .characters__heading {
@@ -11,15 +12,4 @@
   text-align: center;
   padding: 50px 0;
   text-shadow: 5px 2px 9px #6AF76B, 5px 2px 9px #6AF76B, 5px 2px 9px #6AF76B;
-}
-
-.characters__btn-more {
-  padding: 7px 15px;
-  border: none;
-  border-radius: 10px;
-  margin: 20px 70px;
-  background-color: #05bd05;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
 }

@@ -14,8 +14,8 @@ export class CharactersService {
   constructor(private http: HttpClient) {
   }
 
-  getCharacters(searchName: string, searchGender: string, page: number): Observable<CharactersResult[]> {
-    return this.http.get<Characters>(`${this.baseUrl}/character/?page=${page}&name=${searchName}&gender=${searchGender}`).pipe(
+  getCharacters(page: number): Observable<CharactersResult[]> {
+    return this.http.get<Characters>(`${this.baseUrl}/character/?page=${page}`).pipe(
       map((response)=> {
         return response.results
       }),

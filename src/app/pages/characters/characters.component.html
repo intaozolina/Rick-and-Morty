@@ -1,6 +1,6 @@
-<div class="characters__hero">
+<div class="characters__hero"  infiniteScroll
+     [infiniteScrollDistance]="0"
+     (scrolled)="onScroll()">
   <h1 class="characters__heading">CHARACTERS</h1>
-  <app-characters-form (searchCharacterEvent)="searchCharacter($event)"></app-characters-form>
   <app-characters-list [characters]="characters"></app-characters-list>
-  <button class="characters__btn-more" (click)="loadMore()">Load More</button>
 </div>
